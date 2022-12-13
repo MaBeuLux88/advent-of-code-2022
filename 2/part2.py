@@ -2,8 +2,7 @@ def main():
     f = open('inputs/input.txt', 'r')
     rps = [x.strip().split() for x in f.readlines()]
     score = 0
-    for i in range(len(rps)):
-        a, b = rps[i]
+    for a, b in rps:
         if a == 'A':
             if b == 'X':
                 score += 3
