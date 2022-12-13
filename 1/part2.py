@@ -3,13 +3,12 @@ def main():
     calories = [x.strip() for x in f.readlines()]
     sum_calories = []
     cals = 0
-    for c in range(len(calories)):
-        cal = calories[c]
-        if cal == '':
+    for c in calories:
+        if c == '':
             sum_calories.append(cals)
             cals = 0
         else:
-            cals += int(calories[c])
+            cals += int(c)
     sum_calories.append(cals)
     print(sum(sorted(sum_calories, reverse=True)[0:3]))
 
